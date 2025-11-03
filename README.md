@@ -34,6 +34,12 @@ string *SistemaFicheiros::Search(const string &s, int Tipo);
 10. Remover todas as diretorias ou ficheiros; Se tipo = "DIR" remove directorias, senão remove
 ficheiros; Deve devolver true se a operação foi bem sucedida.
 bool SistemaFicheiros::RemoverAll(const string &s, const string &tipo);
+11. Gravar para ficheiro em formato XML todo o Sistema de Ficheiros;
+void SistemaFicheiros::Escrever_XML(const string &s);
+12. Ler de um ficheiro em formato XML todo o Sistema de Ficheiros (antes de ler deve ser
+apagado tudo o que estiver no Sistema de Ficheiros); Se leu corretamente devolve true, senão
+devolve false.
+bool SistemaFicheiros::Ler_XML(const string &s); 
 13. Mover um Ficheiro para outra diretoria; se existir mais do que um ficheiro, move o primeiro
 encontrado; Se o ficheiro já estiver em DirNova, não deve fazer nada. Se conseguir mover
 deve devolver true (false caso contrário);
@@ -72,7 +78,3 @@ Observações:
 - Os alunos não devem alterar os métodos apresentados acima!.
 - Podem e devem criar novos métodos com os nomes que acharem por bem!
 - Sempre na “filosofia” orientada a objetos!
-
-
-12. Gravar para ficheiro em formato XML todo o Sistema de Ficheiros;
-void SistemaFicheiros::Escrever_XML(const string &s); 
